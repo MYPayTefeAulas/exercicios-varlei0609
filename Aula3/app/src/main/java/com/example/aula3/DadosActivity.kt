@@ -4,49 +4,75 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aula3.databinding.ActivityDadosBinding
 
-class DadosActivity : AppCompatActivity() {
+class DadosActivity : AppCompatActivity() {//Início
     private lateinit var biding: ActivityDadosBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         biding = ActivityDadosBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(biding.root)
-        var lista1 = mutableListOf(1,2,3,4,5,6)
-        var lista2 = mutableListOf(1,2,3,4,5,6,7,8,9,10)
-        var lista3 = mutableListOf(1,2,3,4)
+
+        // ******************** Objetos da classe Dados ******************************
+
+        val dado1 = Dados(6)// Dado 1
+        val dado2 = Dados(10)// Dado 2
+        val dado3 = Dados(4)// Dado 3
+
+        // *************************************************
+
+
+        // ******************** Configurações do botão de Ok do dado 1 ****************
+
         biding.btOk1.setOnClickListener {
-            lista1.clear()
-            val tamanhoLista = biding.txtEntradaDado1.text.toString().toInt()
-            biding.txtNumDado1.text = tamanhoLista.toString()
-            for (x in 1..tamanhoLista){
-                lista1.add(x)
+            if(!biding.txtEntradaDado1.text.isNullOrBlank()&&biding.txtEntradaDado1.text.toString().toInt()!=0){// será executado somente se o campo que altera o numero de lados do dado for preenchido
+                val numeroLados = biding.txtEntradaDado1.text.toString().toInt()// variavel que recebe a o numero, que representa a quantidade de lados, que será digitado
+                dado1.numeroLados = numeroLados// alterando o número de lados do dado 1 que inicialmente é 6, para a quantidade de lados que foi digitada
+                biding.txtNumDado1.text = numeroLados.toString()// alterando o texto, que mostra a quantidade de lados que o dado 1 possui, para o valor que foi digitado
+                biding.txtEntradaDado1.text.clear()// limpando o campo após ser digitada a quantidade do número de lados que o dado irá possuir
             }
-            biding.txtEntradaDado1.text.clear()
+
         }
+        // ****************************************************************************
+
+
+        // ******************** Configurações do botão de Ok do dado 2 ****************
+
         biding.btOk2.setOnClickListener {
-            lista2.clear()
-            val tamanhoLista = biding.txtEntradaDado2.text.toString().toInt()
-            biding.txtNumDado2.text = tamanhoLista.toString()
-            for (x in 1..tamanhoLista){
-                lista2.add(x)
+            if(!biding.txtEntradaDado2.text.isNullOrBlank()&&biding.txtEntradaDado2.text.toString().toInt()!=0)// será executado somente se o campo que altera o numero de lados do dado for preenchido
+            {
+                val numeroLados = biding.txtEntradaDado2.text.toString().toInt()// variavel que recebe a o numero, que representa a quantidade de lados, que será digitado
+                dado2.numeroLados = numeroLados// alterando o número de lados do dado 2 que inicialmente é 10, para a quantidade de lados que foi digitada
+                biding.txtNumDado2.text = numeroLados.toString()// alterando o texto, que mostra a quantidade de lados que o dado 2 possui, para o valor que foi digitado
+                biding.txtEntradaDado2.text.clear()// limpando o campo após ser digitada a quantidade do número de lados que o dado irá possuir
             }
-            biding.txtEntradaDado1.text.clear()
+
         }
+
+        // ****************************************************************************
+
+
+        // ******************** Configurações do botão de Ok do dado 3 ****************
+
         biding.btOk3.setOnClickListener {
-            lista3.clear()
-            val tamanhoLista = biding.txtEntradaDado3.text.toString().toInt()
-            biding.txtNumDado3.text = tamanhoLista.toString()
-            for (x in 1..tamanhoLista){
-                lista3.add(x)
+            if(!biding.txtEntradaDado3.text.isNullOrBlank()&&biding.txtEntradaDado3.text.toString().toInt()!=0){// variavel que recebe a o numero, que representa a quantidade de lados, que será digitado
+                val numeroLados = biding.txtEntradaDado3.text.toString().toInt()// variavel que recebe a o numero, que representa a quantidade de lados, que será digitado
+                dado3.numeroLados = numeroLados// alterando o número de lados do dado 3 que inicialmente é 4, para a quantidade de lados que foi digitada
+                biding.txtNumDado3.text = numeroLados.toString()// alterando o texto, que mostra a quantidade de lados que o dado 3 possui, para o valor que foi digitado
+                biding.txtEntradaDado3.text.clear()// limpando o campo após ser digitada a quantidade do número de lados que o dado irá possuir
             }
-            biding.txtEntradaDado1.text.clear()
+
         }
+
+        // ****************************************************************************
+
+
+        // ******************** Configurações do botão Sortear ************************
+
         biding.btSortear.setOnClickListener {
-            lista1.shuffle()
-            lista2.shuffle()
-            lista3.shuffle()
-            biding.txtSaidaDado1.text = lista1[1].toString()
-            biding.txtSaidaDado2.text = lista2[1].toString()
-            biding.txtSaidaDado3.text = lista3[1].toString()
+            biding.txtSaidaDado1.text = dado1.lancar(dado1.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 1
+            biding.txtSaidaDado2.text = dado2.lancar(dado2.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 2
+            biding.txtSaidaDado3.text = dado3.lancar(dado3.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 3
         }
+
+        // ****************************************************************************
     }
-}
+}// fim
