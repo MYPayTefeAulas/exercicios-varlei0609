@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#60FF00"
+    tools:context=".AgendaActivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Agenda"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEntradaNomeAgenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaidaAgenda" />
+
+    <TextView
+        android:id="@+id/txtSaidaAgenda"
+        android:layout_width="200dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/txtEntradaTelefoneAgenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtEntradaNomeAgenda"
+        app:layout_constraintTop_toBottomOf="@+id/txtEntradaNomeAgenda" />
+
+    <Button
+        android:id="@+id/btSalvarContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="72dp"
+        android:background="#306732"
+        android:text="Salvar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEntradaTelefoneAgenda" />
+
+    <Button
+        android:id="@+id/btDeletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:background="#F44336"
+        android:text="Deletar"
+        app:layout_constraintBottom_toBottomOf="@+id/btSalvarContato"
+        app:layout_constraintStart_toEndOf="@+id/btSalvarContato"
+        app:layout_constraintTop_toTopOf="@+id/btSalvarContato"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btProximoAgenda"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="#009688"
+        android:text="Próximo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btDeletar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

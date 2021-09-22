@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula3">
         <activity
+            android:name=".TestesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AgendaActivity"
+            android:exported="true" />
+        <activity
             android:name=".DadosActivity"
             android:exported="true" />
         <activity

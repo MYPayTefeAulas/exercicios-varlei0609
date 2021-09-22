@@ -68,9 +68,9 @@ class DadosActivity : AppCompatActivity() {//Início
         // ******************** Configurações do botão Sortear ************************
 
         biding.btSortear.setOnClickListener {
-            biding.txtSaidaDado1.text = dado1.lancar(dado1.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 1
-            biding.txtSaidaDado2.text = dado2.lancar(dado2.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 2
-            biding.txtSaidaDado3.text = dado3.lancar(dado3.numeroLados)// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 3
+            biding.txtSaidaDado1.text = dado1.lancar()// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 1
+            biding.txtSaidaDado2.text = dado2.lancar()// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 2
+            biding.txtSaidaDado3.text = dado3.lancar()// mostrando o primeiro valor do intervalo que vai de  1 até o número de lados do dado 3
         }
 
         // ****************************************************************************

@@ -33,7 +33,7 @@ class Greeter3Activity : AppCompatActivity() {
         }
         biding.imprimirProximoGreeter3.setOnClickListener {
             if(listaPessoa.size == 0){
-                biding.txtSaidaGreeter3.text = "Nehum dado foi salvo"
+                biding.txtSaidaGreeter3.text = "Nenhum dado foi salvo"
             }else
             {
                 val pessoaAtual = listaPessoa[indiceAtual]
