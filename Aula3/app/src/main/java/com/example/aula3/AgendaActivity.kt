@@ -62,6 +62,12 @@ class AgendaActivity : AppCompatActivity() {
 
 
          }
+        biding.btPesquisar.setOnClickListener {
+
+        var contato = biding.txtEntradaPesquisa.text.toString()
+
+            pesquisar(contato)
+        }
     }
 
 //============================================================
@@ -91,5 +97,20 @@ class AgendaActivity : AppCompatActivity() {
     }
 
     //==============================================================
+    fun pesquisar(contato: String){
+        if(contato == ""){
+            biding.txtSaidaAgenda.text = ("Campo de pesquisa vazio")
+        }else{
+            if(agenda.pesquisarContato(contato).nome == ""){
+                biding.txtSaidaAgenda.text = "O contato $contato não consta na lista"
+            }else{
+                if (!agenda.existeContato()){
+                    biding.txtEntradaTelefoneAgenda.setText(agenda.pesquisarContato(contato).contato)
+                    biding.txtEntradaNomeAgenda.setText(agenda.pesquisarContato(contato).nome)
+                }
+            }
+
+        }
+    }
 }
 

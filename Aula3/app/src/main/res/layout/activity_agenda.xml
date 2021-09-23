@@ -11,7 +11,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:text="Agenda"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,10 +21,10 @@
 
     <EditText
         android:id="@+id/txtEntradaNomeAgenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
@@ -33,18 +33,18 @@
 
     <TextView
         android:id="@+id/txtSaidaAgenda"
-        android:layout_width="200dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
         android:id="@+id/txtEntradaTelefoneAgenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Telefone"
@@ -56,8 +56,8 @@
         android:id="@+id/btSalvarContato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:background="#306732"
         android:text="Salvar"
         android:textColor="#FFFFFF"
@@ -68,23 +68,47 @@
         android:id="@+id/btDeletar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="56dp"
         android:background="#F44336"
         android:text="Deletar"
         app:layout_constraintBottom_toBottomOf="@+id/btSalvarContato"
         app:layout_constraintStart_toEndOf="@+id/btSalvarContato"
         app:layout_constraintTop_toTopOf="@+id/btSalvarContato"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btProximoAgenda"
         android:layout_width="109dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="#009688"
         android:text="Próximo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btDeletar" />
+
+    <EditText
+        android:id="@+id/txtEntradaPesquisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:hint="Contato"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSalvarContato" />
+
+    <Button
+        android:id="@+id/btPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:background="#CDDC39"
+        android:text="Pesquisar"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEntradaPesquisa"
+        app:layout_constraintStart_toEndOf="@+id/txtEntradaPesquisa"
+        app:layout_constraintTop_toTopOf="@+id/txtEntradaPesquisa" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

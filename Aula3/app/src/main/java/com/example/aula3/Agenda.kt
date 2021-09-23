@@ -3,7 +3,7 @@ package com.example.aula3
 class Agenda {
     private val listaContatos = mutableListOf<Pessoa>()
     private var indiceAtual = -1
-
+    var numeroDeContatos = 0
     fun salvarContato(novoContato: Pessoa): Boolean{
    var auxiliar = true
     for (x in 0..listaContatos.size -1){
@@ -41,4 +41,18 @@ class Agenda {
         }
         return false
     }
+
+    fun pesquisarContato(contato: String): Pessoa {
+
+        var contatoPesquisa = Pessoa("","")
+        for (x in 0..listaContatos.size - 1) {
+            if (contato == listaContatos[x].contato||contato == listaContatos[x].nome) {
+                 contatoPesquisa = listaContatos[x]
+                 numeroDeContatos++
+                break
+            }
+        }
+        return contatoPesquisa
+    }
+
     }
