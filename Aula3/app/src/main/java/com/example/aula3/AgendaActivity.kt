@@ -68,6 +68,27 @@ class AgendaActivity : AppCompatActivity() {
 
             pesquisar(contato)
         }
+        biding.btEditar.setOnClickListener {
+            val nome = biding.txtEntradaNomeAgenda.text.toString()
+            val contato = biding.txtEntradaTelefoneAgenda.text.toString()
+            if(nome!=""&&contato!=""){
+               if(agenda.contatoExiste(contato)) {
+                   contatoAtual.nome = nome
+                   contatoAtual.contato = contato
+                   biding.txtSaidaAgenda.text = "Edição realizada"
+                   biding.txtEntradaNomeAgenda.text.clear()
+                   biding.txtEntradaTelefoneAgenda.text.clear()
+               }else{
+                   biding.txtSaidaAgenda.text = "Contato já existe"
+               }
+
+
+            }else{
+                biding.txtSaidaAgenda.text = "Existem campos vazios"
+            }
+
+
+        }
     }
 
 //============================================================
@@ -102,7 +123,7 @@ class AgendaActivity : AppCompatActivity() {
             biding.txtSaidaAgenda.text = ("Campo de pesquisa vazio")
         }else{
             if(agenda.pesquisarContato(contato).nome == ""){
-                biding.txtSaidaAgenda.text = "O contato $contato não consta na lista"
+                biding.txtSaidaAgenda.text = "O contato/nome $contato não consta na lista"
             }else{
                 if (!agenda.existeContato()){
                     biding.txtEntradaTelefoneAgenda.setText(agenda.pesquisarContato(contato).contato)
