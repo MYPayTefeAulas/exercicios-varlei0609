@@ -5,6 +5,7 @@ class Agenda {
     private var indiceAtual = -1
     var numeroDeContatos = 0
     fun salvarContato(novoContato: Pessoa): Boolean{
+
    var auxiliar = true
     for (x in 0..listaContatos.size -1){
     if (listaContatos[x].contato == novoContato.contato){
@@ -16,15 +17,17 @@ class Agenda {
             listaContatos.add(novoContato)
             true
         }else false
-    }
-    fun removeContato(contatoARemover: Pessoa): Boolean{
 
-            listaContatos.remove(contatoARemover)
-        indiceAtual -=1
+    }
+
+    fun removeContato(contatoARemover: Pessoa): Boolean {
+        listaContatos.remove(contatoARemover)
+        indiceAtual -= 1
             return true
     }
+
     fun proximoContato():Pessoa{
-        if(indiceAtual < -1){
+        if(indiceAtual < 0){
             indiceAtual = 0
         }
         else if(indiceAtual >= listaContatos.size -1){
@@ -54,7 +57,9 @@ class Agenda {
         }
         return contatoPesquisa
     }
+
     fun contatoExiste(contato: String): Boolean{
+
         for (x in 0..listaContatos.size - 1){
             if(contato == listaContatos[x].contato){
                 return false
@@ -63,4 +68,5 @@ class Agenda {
         }
         return true
     }
+
     }

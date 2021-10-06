@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula3">
         <activity
+            android:name=".HistoricoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BatalhaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DadosGuerreiroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TelaInicialActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RpgActivity"
+            android:exported="true" />
+        <activity
             android:name=".TestesActivity"
             android:exported="true" />
         <activity
@@ -19,13 +34,13 @@
             android:name=".DadosActivity"
             android:exported="true" />
         <activity
-            android:name=".Greeter3Activity"
+            android:name=".Greeter.Greeter3Activity"
             android:exported="true" />
         <activity
-            android:name=".Greeter2Activity"
+            android:name=".Greeter.Greeter2Activity"
             android:exported="true" />
         <activity
-            android:name=".GreeterActivity"
+            android:name=".Greeter.GreeterActivity"
             android:exported="true" />
         <activity
             android:name=".PessoasActivity"

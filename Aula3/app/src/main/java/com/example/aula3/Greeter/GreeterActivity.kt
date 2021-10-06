@@ -1,9 +1,9 @@
-package com.example.aula3
+package com.example.aula3.Greeter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.aula3.Greeter.Greeter
 import com.example.aula3.databinding.ActivityGreeterBinding
-import com.example.aula3.databinding.ActivityGreeterBinding.*
 
 class GreeterActivity : AppCompatActivity() {
     private lateinit var biding: ActivityGreeterBinding

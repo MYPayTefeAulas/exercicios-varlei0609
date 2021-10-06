@@ -1,4 +1,7 @@
-package com.example.aula3
+package com.example.aula3.Greeter
+
+import com.example.aula3.PessoaGreeter
+
 class Greeter{
     private var prefixo  = ""
     private var sufixo   = ""
@@ -21,7 +24,7 @@ class Greeter{
         val cumprimentoAtual = "$prefixo $nome $sufixo"
         return cumprimentoAtual
     }
-    fun greet2(pessoa1 :PessoaGreeter): String{
+    fun greet2(pessoa1 : PessoaGreeter): String{
 
         return "$parte1: ${pessoa1.nome} $parte2: ${pessoa1.profissao} $parte3: ${pessoa1.telefone}"
     }

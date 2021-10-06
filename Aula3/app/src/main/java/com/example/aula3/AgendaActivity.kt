@@ -9,7 +9,6 @@ class AgendaActivity : AppCompatActivity() {
     private lateinit var biding: ActivityAgendaBinding
     val agenda = Agenda()
     var contatoAtual  = Pessoa("","")
-
 //============================================================
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +22,7 @@ class AgendaActivity : AppCompatActivity() {
 //============================================================
 
         biding.btSalvarContato.setOnClickListener {
+
             val nome = biding.txtEntradaNomeAgenda.text.toString()
             val contato = biding.txtEntradaTelefoneAgenda.text.toString()
             salvarContato(nome,contato)
@@ -32,6 +32,7 @@ class AgendaActivity : AppCompatActivity() {
 //============================================================
 
         biding.btProximoAgenda.setOnClickListener {
+
             if(agenda.existeContato()){
                 biding.txtSaidaAgenda.text = "Lista vazia"
             }else{
@@ -72,15 +73,21 @@ class AgendaActivity : AppCompatActivity() {
             val nome = biding.txtEntradaNomeAgenda.text.toString()
             val contato = biding.txtEntradaTelefoneAgenda.text.toString()
             if(nome!=""&&contato!=""){
-               if(agenda.contatoExiste(contato)) {
-                   contatoAtual.nome = nome
-                   contatoAtual.contato = contato
-                   biding.txtSaidaAgenda.text = "Edição realizada"
-                   biding.txtEntradaNomeAgenda.text.clear()
-                   biding.txtEntradaTelefoneAgenda.text.clear()
-               }else{
-                   biding.txtSaidaAgenda.text = "Contato já existe"
-               }
+                if(agenda.existeContato()){
+                    biding.txtSaidaAgenda.text = "Agenda vazia"
+
+                }else{
+                    if(agenda.contatoExiste(contato)) {
+                        contatoAtual.nome = nome
+                        contatoAtual.contato = contato
+                        biding.txtSaidaAgenda.text = "Edição realizada"
+                        biding.txtEntradaNomeAgenda.text.clear()
+                        biding.txtEntradaTelefoneAgenda.text.clear()
+                    }else{
+                        biding.txtSaidaAgenda.text = "Erro: ontato já existe"
+                    }
+                }
+
 
 
             }else{
