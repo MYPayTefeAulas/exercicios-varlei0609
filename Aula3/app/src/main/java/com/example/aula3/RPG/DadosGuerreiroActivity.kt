@@ -1,10 +1,8 @@
-package com.example.aula3
+package com.example.aula3.RPG
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.aula3.databinding.ActivityBatalhaBinding
-import com.example.aula3.databinding.ActivityDadosBinding
 import com.example.aula3.databinding.ActivityDadosGuerreiroBinding
 
 class DadosGuerreiroActivity : AppCompatActivity() {
@@ -28,7 +26,7 @@ class DadosGuerreiroActivity : AppCompatActivity() {
         biding.txtVida22.text = vida_guerreiro2.toString()
 
         biding.btIniciar.setOnClickListener {
-            val intent = Intent(this,BatalhaActivity::class.java)
+            val intent = Intent(this, BatalhaActivity::class.java)
             intent.putExtra("Guerreiro1",nome_guerreiro1)
             intent.putExtra("Ataque1",ataque_guerreiro1)
             intent.putExtra("Vida1",vida_guerreiro1)

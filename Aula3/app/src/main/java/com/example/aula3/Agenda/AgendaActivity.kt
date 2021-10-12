@@ -1,6 +1,8 @@
-package com.example.aula3
+package com.example.aula3.Agenda
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.aula3.Pessoa
+import com.example.aula3.R
 import com.example.aula3.databinding.ActivityAgendaBinding
 
 class AgendaActivity : AppCompatActivity() {

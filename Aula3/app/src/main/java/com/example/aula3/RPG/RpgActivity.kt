@@ -1,8 +1,9 @@
-package com.example.aula3
+package com.example.aula3.RPG
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.aula3.Dados.Dados
 import com.example.aula3.databinding.ActivityRpgBinding
 
 class RpgActivity : AppCompatActivity() {
@@ -22,8 +23,9 @@ class RpgActivity : AppCompatActivity() {
                 biding.txtSaidaRPG.text = "Escolha um nome para o player 2"
 
             }
+
             else{
-                val intent = Intent(this,DadosGuerreiroActivity::class.java)
+                val intent = Intent(this, DadosGuerreiroActivity::class.java)
                 //***************************************************************
                 val nome1 = biding.txtNomeGuerreiro1.text.toString()
                 var forca_guerreiro1 = dado1.forcaAtaque()

@@ -1,4 +1,6 @@
-package com.example.aula3
+package com.example.aula3.Agenda
+
+import com.example.aula3.Pessoa
 
 class Agenda {
     private val listaContatos = mutableListOf<Pessoa>()
@@ -26,7 +28,7 @@ class Agenda {
             return true
     }
 
-    fun proximoContato():Pessoa{
+    fun proximoContato(): Pessoa {
         if(indiceAtual < 0){
             indiceAtual = 0
         }

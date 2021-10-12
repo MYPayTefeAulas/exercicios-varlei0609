@@ -10,28 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula3">
         <activity
-            android:name=".HistoricoActivity"
+            android:name=".RPG.HistoricoActivity"
             android:exported="true" />
         <activity
-            android:name=".BatalhaActivity"
+            android:name=".RPG.BatalhaActivity"
             android:exported="true" />
         <activity
-            android:name=".DadosGuerreiroActivity"
+            android:name=".RPG.DadosGuerreiroActivity"
             android:exported="true" />
         <activity
             android:name=".TelaInicialActivity"
             android:exported="true" />
         <activity
-            android:name=".RpgActivity"
+            android:name=".RPG.RpgActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".Agenda.AgendaActivity"
             android:exported="true" />
         <activity
-            android:name=".TestesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AgendaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DadosActivity"
+            android:name=".Dados.DadosActivity"
             android:exported="true" />
         <activity
             android:name=".Greeter.Greeter3Activity"
@@ -43,19 +46,15 @@
             android:name=".Greeter.GreeterActivity"
             android:exported="true" />
         <activity
-            android:name=".PessoasActivity"
+            android:name=".Listas.PessoasActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".ListasActivity"
+            android:name=".Listas.ListasActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Listas.MainActivity"
             android:exported="true" />
     </application>
 

@@ -1,9 +1,8 @@
-package com.example.aula3
+package com.example.aula3.Listas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AlertDialogLayout
+import com.example.aula3.Pessoa
 import com.example.aula3.databinding.ActivityPessoasBinding
 
 class PessoasActivity : AppCompatActivity() {

@@ -1,7 +1,5 @@
 package com.example.aula3.Greeter
 
-import com.example.aula3.PessoaGreeter
-
 class Greeter{
     private var prefixo  = ""
     private var sufixo   = ""

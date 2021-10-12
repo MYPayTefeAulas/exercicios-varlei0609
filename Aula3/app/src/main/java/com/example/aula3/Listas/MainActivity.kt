@@ -1,6 +1,5 @@
-package com.example.aula3
+package com.example.aula3.Listas
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aula3.databinding.ActivityMainBinding

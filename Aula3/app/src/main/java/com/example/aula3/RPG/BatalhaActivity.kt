@@ -1,18 +1,11 @@
-package com.example.aula3
+package com.example.aula3.RPG
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aula3.databinding.ActivityBatalhaBinding
-import java.util.*
 
 class BatalhaActivity : AppCompatActivity() {
-    val dado1 = Dados(4)
-    var sorteio1 = dado1.sortear()
-    var vencedor: String = ""
-    var perdedor: String = ""
-    var listaVencedor = mutableListOf<String>()
-    var listaPerdedor = mutableListOf<String>()
     private lateinit var biding: ActivityBatalhaBinding
 var proximoTurno  = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +23,6 @@ var proximoTurno  = false
         super.onCreate(savedInstanceState)
         setContentView(biding.root)
         biding.txtSaidaRPGB.text = arena.obterTextoExibicao()
-
       biding.btAtacar.setOnClickListener {
           if(proximoTurno){
               biding.txtResultado.text = "A batalha terminou, clique em jogar próximo turno"
@@ -53,19 +45,12 @@ var proximoTurno  = false
                       guerreiro1.vidaAtual = 0
                       biding.txtResultado.text = "O guerreiro ${guerreiro2.nome} venceu"
                       proximoTurno = true
-                      vencedor = guerreiro2.nome
-                      perdedor = guerreiro1.nome
-                      listaVencedor.add(vencedor)
-                      listaPerdedor.add(perdedor)
+
                   }
                   else if(guerreiro2.vidaAtual<=0){
                       guerreiro2.vidaAtual = 0
                       biding.txtResultado.text = "O guerreiro ${guerreiro1.nome} venceu"
                       proximoTurno = true
-                      vencedor = guerreiro1.nome
-                      perdedor = guerreiro2.nome
-                      listaVencedor.add(vencedor)
-                      listaPerdedor.add(perdedor)
                   }
               }
 
@@ -76,7 +61,7 @@ var proximoTurno  = false
           if(guerreiro1.vidaAtual>0&&guerreiro2.vidaAtual>0){
               biding.txtResultado.text = "Termine a batalha atual"
           }else{
-              val intent = Intent(this,DadosGuerreiroActivity::class.java)
+              val intent = Intent(this, DadosGuerreiroActivity::class.java)
               biding.barra1.progress = 0
               biding.barra2.progress = 0
               proximoTurno = false

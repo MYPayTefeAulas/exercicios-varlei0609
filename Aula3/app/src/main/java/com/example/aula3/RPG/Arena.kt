@@ -1,4 +1,6 @@
-package com.example.aula3
+package com.example.aula3.RPG
+
+import com.example.aula3.Dados.Dados
 
 class Arena(val guerreiro1: Guerreiro, val guerreiro2: Guerreiro) {
     val dado1 = Dados(0)

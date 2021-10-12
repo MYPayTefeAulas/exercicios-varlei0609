@@ -2,7 +2,6 @@ package com.example.aula3.Greeter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.aula3.PessoaGreeter
 import com.example.aula3.databinding.ActivityGreeter3Binding
 
 class Greeter3Activity : AppCompatActivity() {

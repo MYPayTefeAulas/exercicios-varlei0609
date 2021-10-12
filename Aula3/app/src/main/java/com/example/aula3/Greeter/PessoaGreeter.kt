@@ -1,4 +1,4 @@
-package com.example.aula3
+package com.example.aula3.Greeter
 
 class PessoaGreeter{
     var nome = ""
